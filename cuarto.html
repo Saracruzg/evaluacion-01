@@ -50,17 +50,19 @@ print (tiempo);
 
 function draw() {
   background(220);
-var calor = Math.round(tiempo.main.temp);
-	if (calor > 15){
+  var calor = Math.round(tiempo.main.temp);
+	var critica;
+	if (calor < 15){
 		fill(255,0,0);
+		critica = "vaya en polera"
 	} else {
 		fill(0,0,255);
+		critica = "vaya con chaleco"
 	}
-	textSize(36);
-	text(calor,10,40);
-text('Temperatura en Angol', 12,78);
-    
-	
+	textSize(25);
+	text(calor,width/2, (height/2)+40);
+	textSize(25);
+	text('Si va para Angol, ' + critica, width/2,height/2);	
 }
      
     </script>
